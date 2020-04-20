@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @FeignClient("jettydemo")
 public interface StudentService {
 
-    @RequestMapping("api/v1/selectOne/{id}")
+    @RequestMapping("api/v1/selectOne?id={id}")
     public Student selectOne(@PathVariable("id")Integer id);
 
     @RequestMapping("api/v1/addOne")
